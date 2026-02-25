@@ -63,4 +63,4 @@ pri-rt-name = "eks-pri-rt"
 // EKS
 
 node_instance_type   = "t3.medium"
-node_key_name        = "my-ec2-keypair"
+node_key_name        = "terraform"
