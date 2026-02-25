@@ -158,7 +158,7 @@ resource "aws_route_table_association" "eks-pri-rt-assoc-2" {
 resource "aws_eks_cluster" "eks_cluster" {
   name     = "my-eks-cluster"
   role_arn = aws_iam_role.eks_cluster_role.arn
-  version  = "1.28"
+  version  = "1.29"  
 
   vpc_config {
     subnet_ids         = [
