@@ -1,0 +1,23 @@
+name: CICD Deployment in EKS with Monitoring
+
+on:
+  push:
+    branches:
+      - main
+    
+jobs:
+
+  terraform:
+    uses: ./.github/workflows/terraform.yaml
+
+  build-and-push:
+    needs: terraform
+    uses: ./.github/workflows/build-and-push.yaml
+
+  deploy-to-eks:
+    needs: build-and-push
+    uses: ./.github/workflows/deploy-to-eks.yaml
+
+  observability:
+    needs: deploy-to-eks
+    uses: ./.github/workflows/observability.yaml
