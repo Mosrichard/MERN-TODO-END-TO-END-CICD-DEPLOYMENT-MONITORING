@@ -3,18 +3,6 @@ variable "region" {
     type        = string
 }
 
-// S3 backend variables
-
-variable "bucket" {
-    description = "The name of the S3 bucket for Terraform state storage."
-    type        = string  
-}
-
-variable "key" {
-    description = "The Key of the S3 bucket for Terraform state storage."
-    type        = string  
-}
-
 // VPC variables
 
 variable "vpc-cidr" {
