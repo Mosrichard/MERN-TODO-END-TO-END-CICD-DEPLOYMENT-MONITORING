@@ -65,5 +65,3 @@ pri-rt-name = "eks-pri-rt"
 node_instance_type   = "t3.medium"
 node_key_name        = "my-ec2-keypair"
 
-public_subnet_ids    = [eks-pub-subnet-1.id, eks-pub-subnet-2.id]
-private_subnet_ids   = [eks-pri-subnet-1.id, eks-pri-subnet-2.id]

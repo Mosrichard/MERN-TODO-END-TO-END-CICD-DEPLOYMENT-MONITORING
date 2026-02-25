@@ -181,17 +181,16 @@ variable "node_instance_type" {
     type        = string
 }
 
-variable "private_subnet_ids" {
-    description = "List of private subnet IDs for EKS worker nodes."
-    type        = list(string)
-}
 
 variable "node_key_name" {
     description = "The name of the EC2 key pair for EKS worker nodes."
     type        = string
 }
 
+<<<<<<< HEAD
 variable "public_subnet_ids" {
     description = "List of public subnet IDs for EKS worker nodes."
     type        = list(string)
 }
+=======
+>>>>>>> 250aa3a (removed unwanted codes in tf)
