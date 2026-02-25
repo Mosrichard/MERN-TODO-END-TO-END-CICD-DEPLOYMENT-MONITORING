@@ -21,3 +21,4 @@ jobs:
   observability:
     needs: deploy-to-eks
     uses: ./.github/workflows/observability.yaml
+    
