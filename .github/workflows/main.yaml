@@ -15,13 +15,18 @@ jobs:
     uses: ./.github/workflows/terraform.yaml
     secrets: inherit
 
-  build-and-push:
+  build-and-push-frontend:
     needs: terraform
-    uses: ./.github/workflows/build-and-push.yaml
+    uses: ./.github/workflows/build-and-push-frontend.yaml
+    secrets: inherit
+
+  build-and-push-backend:
+    needs: terraform
+    uses: ./.github/workflows/build-and-push-backend.yaml
     secrets: inherit
 
   deploy-to-eks:
-    needs: build-and-push
+    needs: [ build-and-push-frontend, build-and-push-backend ]
     uses: ./.github/workflows/deploy-to-eks.yaml
     secrets: inherit
 

@@ -1,10 +1,10 @@
-name: Build and Push Docker Image to Docker Hub / ECR   -- ( Docker Hub )
+name: Build and Push Backend Docker Image to Docker Hub / ECR   -- ( Docker Hub )
 
 on:
   workflow_call:
 
 jobs:
-  build-and-push:
+  build-and-push-backend:
     runs-on: ubuntu-latest
     steps:
 
@@ -19,12 +19,8 @@ jobs:
 
     - name: Build and Push Docker Image to Docker Hub
       run: |
-        docker build -t ${{ vars.DOCKERHUB_USERNAME }}/cicd-tf-vpc-actions-frontend:${{ github.sha }} ./frontend
         docker build -t ${{ vars.DOCKERHUB_USERNAME }}/cicd-tf-vpc-actions-backend:${{ github.sha }} ./backend
 
     - name: Push to Docker Hub
       run: |
-        docker push ${{ vars.DOCKERHUB_USERNAME }}/cicd-tf-vpc-actions-frontend:${{ github.sha }}
         docker push ${{ vars.DOCKERHUB_USERNAME }}/cicd-tf-vpc-actions-backend:${{ github.sha }}
-
-    
