@@ -1,6 +1,6 @@
 # MERN Stack CI/CD Pipeline with Terraform & Kubernetes
 
-![MERN-CICD-EKS-MONITORING](https://raw.githubusercontent.com/Mosrichard/MERN-TODO-END-TO-END-CICD-DEPLOYMENT-MONITORING/main/MERN-CICD-EKS-MONITORING.png)
+![MERN-CICD-EKS-MONITORING](https://raw.githubusercontent.com/Mosrichard/MERN-TODO-END-TO-END-CICD-DEPLOYMENT-MONITORING/main/MERN-TODO-END-TO-END-CICD-DEPLOYMENT-MONITORING.png)
 
 A complete DevOps project featuring a MERN (MongoDB, Express, React, Node.js) application with automated CI/CD pipeline, infrastructure as code, and Kubernetes orchestration.
 
