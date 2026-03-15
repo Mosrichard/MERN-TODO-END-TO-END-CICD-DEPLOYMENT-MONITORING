@@ -40,6 +40,7 @@ resource "aws_subnet" "private_1" {
   availability_zone = "ap-south-1a"
   tags = {
     Name                              = "eks-private-1"
+    "kubernetes.io/cluster/my-eks-cluster" = "shared"
     "kubernetes.io/role/internal-elb" = "1"
   }
 }
@@ -50,6 +51,7 @@ resource "aws_subnet" "private_2" {
   availability_zone = "ap-south-1b"
   tags = {
     Name                              = "eks-private-2"
+    "kubernetes.io/cluster/my-eks-cluster" = "shared"
     "kubernetes.io/role/internal-elb" = "1"
   }
 }
